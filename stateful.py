@@ -26,13 +26,13 @@ if __name__ == "__main__":
         llm=chat, chain_type="stuff", retriever=vectorstore.as_retriever()
     )  
 
-    res = qa({"question": "What are the applications of generative AI according the the paper? Please number each application.", "chat_history": chat_history})
+    res = qa({"question": "What does the policy say about theft coverage under Section 2: Fire and theft?", "chat_history": chat_history})
     print(res)
 
     history = (res["question"], res["answer"])
     chat_history.append(history)
 
-    res = qa({"question": "Can you please elaborate more on application number 2?", "chat_history": chat_history})
+    res = qa({"question": "Can you please elaborate more on Section 2?", "chat_history": chat_history})
     print(res)
 
 
